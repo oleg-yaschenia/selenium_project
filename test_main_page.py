@@ -33,7 +33,7 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
 
 @pytest.mark.login_guest
 class TestLoginFromMainPage():
-    @pytest.mark.xfail #xfail because LOGIN_INVALID_LINK
+    @pytest.mark.xfail(reason="INVALID_LINK")
     def test_guest_can_go_to_login_page(self, browser):
         self.link = "http://selenium1py.pythonanywhere.com"
         page = MainPage(browser, self.link)
