@@ -1,5 +1,4 @@
 from .pages.login_page import LoginPage
-import time
 
 
 def test_login_page_url(browser):
@@ -7,6 +6,7 @@ def test_login_page_url(browser):
     page = LoginPage(browser, link)
     page.open()
     page.should_be_login_page()
+
 
 
 
